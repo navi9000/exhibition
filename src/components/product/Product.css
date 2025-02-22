@@ -1,0 +1,54 @@
+@layer module {
+  @scope (.product) {
+    :scope {
+      position: relative;
+      display: grid;
+      grid-template-rows: subgrid;
+      align-content: center;
+      padding: 2em 1em 1em;
+      gap: 1em;
+      border-radius: 2em;
+      overflow: hidden;
+      color: var(--color-white);
+      transition: 300ms;
+      text-align: center;
+      max-width: 50vw;
+
+      &:hover {
+        transform: scale(1.1);
+
+        div {
+          transform: scale(1.15);
+        }
+      }
+
+      > img {
+        object-fit: cover;
+        object-position: top center;
+        z-index: -1;
+      }
+
+      div {
+        block-size: 8.375em;
+        aspect-ratio: 1;
+        position: relative;
+        margin-inline: auto;
+        transition: 300ms;
+
+        > img {
+          object-fit: cover;
+        }
+      }
+
+      h3 {
+        font-size: 2rem;
+        block-size: auto;
+      }
+
+      p {
+        font-size: 1.125rem;
+        block-size: auto;
+      }
+    }
+  }
+}

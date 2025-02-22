@@ -1,0 +1,27 @@
+@layer module {
+  @scope (.button) {
+    :scope {
+      > span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > svg {
+          object-fit: contain;
+          block-size: inherit;
+          inline-size: inherit;
+        }
+      }
+
+      > span.standard {
+        block-size: 2.5rem;
+        inline-size: 2.5rem;
+      }
+
+      > span.small {
+        block-size: 1.25rem;
+        inline-size: 1.25rem;
+      }
+    }
+  }
+}

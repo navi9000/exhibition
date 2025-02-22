@@ -1,0 +1,61 @@
+@layer module {
+  .button {
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-white);
+    transition: 300ms;
+  }
+
+  .button--disabled {
+    pointer-events: none;
+  }
+
+  .button--default {
+    background: linear-gradient(
+      135deg,
+      var(--color-dark-green) 0%,
+      var(--color-light-green) 46.88%
+    );
+    border-radius: 0.75em;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .button--default.button--standard {
+    padding: 1.25em 1.875em;
+    line-height: 130%;
+  }
+
+  .button--default.button--small {
+    padding: 0.625em 1.25em;
+    line-height: 162%;
+  }
+
+  .button--circle {
+    border-radius: 50%;
+    background-color: var(--color-light-green);
+    display: flex;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      box-shadow: 0 0 1em 0.25em var(--color-light-green);
+    }
+  }
+
+  .button--circle.button--standard {
+    opacity: 0.6;
+    padding: 1em;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .button--circle.button--small {
+    padding: 0.5em;
+  }
+}

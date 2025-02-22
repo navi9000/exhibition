@@ -1,0 +1,10 @@
+@layer theme {
+  :root {
+    --color-dark-green: #148b43;
+    --color-light-green: #55ca83;
+    --color-white: #ffffff;
+
+    accent-color: var(--color-light-green);
+    /* color-scheme: dark; */
+  }
+}
